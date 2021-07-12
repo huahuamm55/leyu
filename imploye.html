@@ -86,14 +86,14 @@
                     <span>首页</span>
                   </a>
                 </li>
-                <li>
-                  <a href="about.html">
-                    <span>关于我们</span>
-                  </a>
-                </li>
                 <li class="active">
                   <a href="">
                     <span>招贤纳士</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html">
+                    <span>关于我们</span>
                   </a>
                 </li>
                 <li>
@@ -273,22 +273,10 @@
             name: '技术开发类',
             id: '0'
           },
-
           {
-            name: '产品策划类',
-            id: '1'
-          },
-
-          {
-            name: '风控数据类',
-            id: '2'
-          },
-
-          {
-            name: '市场运营类',
+            name: '市场推广类',
             id: '5'
-           },
-
+          },
           {
             name: '美术设计类',
             id: '3'
@@ -302,17 +290,11 @@
             name: '公共职能类',
             id: '6'
           },
-
           {
-            name: '客服支持类',
+            name: '职能岗位类',
             id: '7'
-          },
-
-          {
-            name: '财务薪酬类',
-            id: '8'
           }
-          
+
         ];
         let tab_str = '';
         tabs.forEach((ele, index) => {
@@ -338,9 +320,7 @@
           } else {
             str_wrap += `<h1>暂无信息</h1><div style="display: flex;flex-wrap:wrap" id="jobItemWrap">`;
           }
-          console.log(itemTypes);
           itemTypes.forEach((ele, index) => {
-            console.log(ele);
             str_wrap += `<div data-info='${JSON.stringify(
               ele
             )}' style="padding:0 ${+index%2!==0?0:'15px'} 15px 0 ;width: 50%;"
@@ -378,10 +358,8 @@
           $('#content-' + id).addClass('showList');
         });
         $('.tab-cont').on('click', '.jobItem', function() {
-          console.log($(this).data('info'));
           const data = $(this).data('info');
           // const data = JSON.parse(dataString);
-          // console.log(dataString.name)
           generateModal(data);
         });
         function generateModal(data) {
