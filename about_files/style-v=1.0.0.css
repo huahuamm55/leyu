@@ -2514,10 +2514,10 @@ a.demo {
 }
 
 .about-us-page #banner .overlay {
-	background: url(../img/about-banner.jpg) no-repeat;
+	background: url(../img/dibai.jpg) no-repeat;
     background-position:center;
     background-size: cover;height: 400px;
-	
+
 }
 
 .join-us-page #banner .overlay {
